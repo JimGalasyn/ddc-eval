@@ -101,6 +101,9 @@ fi
 if [[ $MACHINE_DRIVER == 'kvm' ]]; then
 	MACHINE_DRIVER_FLAGS="--kvm-memory 2048 --kvm-disk-size 16000"
 fi
+if [[ $MACHINE_DRIVER == 'hyperv' ]]; then
+	MACHINE_DRIVER_FLAGS="--hyperv-memory 2048 --hyperv-disk-size 16000"
+fi
 
 echo "Using $MACHINE_DRIVER as a virtualization driver. To use another driver, restart this script with the MACHINE_DRIVER and MACHINE_DRIVER_FLAGS environment variables set"
 
